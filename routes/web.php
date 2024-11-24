@@ -5,23 +5,20 @@ use App\Http\Controllers\PekerjaanController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', [frontController::class, 'view'])->middleware(['auth', 'verified']);
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('dashboard', [frontController::class, 'index'] )->name('dashboard');;
 
+Route::get('/', [frontController::class, 'index'])->name('dashboard')->middleware(['auth', 'verified']);
 Route::prefix('dashboard')->middleware(['auth', 'role:user'])->group(function () {
     route::get('/portal-job', function () {
         return view('User.index');
     })->name('dashboard');
 
     Route::resource('job', PekerjaanController::class);
-    
 });
 
 Route::middleware('auth', 'role:user', 'verified')->group(function () {

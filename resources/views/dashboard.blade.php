@@ -37,61 +37,6 @@
                     </div>
                 </div>
             </section>
-        </div>
-
- 
-        {{-- 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    <h2 class="text-lg font-semibold mb-4">Job Details</h2>
-                    @forelse ( $jobs as $job )
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 class="font-bold">Company</h3>
-                            <p>{{ $job->company }}</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 class="font-bold">Title</h3>
-                            <p>{{ $job->title }}</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 class="font-bold">Email</h3>
-                            <p>{{ $job->email }}</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 class="font-bold">Location</h3>
-                            <p>{{ $job->location }}</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 class="font-bold">Description</h3>
-                            <p>{{ $job->description }}</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 class="font-bold">Category</h3>
-                            <p>{{ $job->kategoris->name }}</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 class="font-bold">Posted On</h3>
-                            <p>{{ $job->created_at->format('Y-m-d') }}</p> <!-- Format the date as needed -->
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg shadow">
-                            <h3 class="font-bold">Thumbnail</h3>
-                            @if ($job->thumbnail)
-                                <img src="{{ asset('images/thumbnails/' . $job->thumbnail) }}" alt="Job Thumbnail"
-                                    class="w-full h-auto rounded">
-                            @else
-                                <p>No thumbnail available.</p>
-                            @endif
-                        </div>
-                    </div>
-                    @empty
-                        <p>date belom ada</p>
-                    @endforelse
-                </div>
-            </div>
-        </div>
-    </div> --}}
+        </div>   
     </x-app-layout>
 @endif

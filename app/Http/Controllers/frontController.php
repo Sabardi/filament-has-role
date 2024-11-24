@@ -12,4 +12,10 @@ class frontController extends Controller
         $jobs = Pekerjaan::with('kategoris')->get();
         return view('dashboard', compact('jobs'));
     }
+
+    public function view()
+    {
+        $jobs = Pekerjaan::with('kategoris')->get();
+        return view('welcome', compact('jobs'));
+    }
 }
