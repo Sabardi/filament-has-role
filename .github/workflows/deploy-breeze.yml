@@ -5,7 +5,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - breeze
 
 # Authenticate to the the server via ssh
 # and run our deployment script
@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Deploy to server
-        uses: appleboy/ssh-action@main
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
@@ -23,4 +23,4 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD   }}
           # don't forget to run this command for changes folder scripts permission: chmod -R 755 .scripts
           script: |
-            cd home/digimsib/repositories/filament-has-role && ./.scripts/deploy-breeze.sh
+            cd /home/digimsib/repositories/filament-has-role && ./.scripts/deploy-breeze.sh
