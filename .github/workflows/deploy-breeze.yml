@@ -23,4 +23,4 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD   }}
           # don't forget to run this command for changes folder scripts permission: chmod -R 755 .scripts
           script: |
-            cd /home/digimsib/repositories/filament-has-role && ./.scripts/deploy-breeze.sh
+            cd /home/digimsib/repositories/filament-has-role && .scripts/deploy-breeze.sh
