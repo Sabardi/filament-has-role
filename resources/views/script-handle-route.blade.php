@@ -1,4 +1,5 @@
 @if (Auth::check())
+{{--  --}}
     <script>
         @php
             $roleRoutes = [
